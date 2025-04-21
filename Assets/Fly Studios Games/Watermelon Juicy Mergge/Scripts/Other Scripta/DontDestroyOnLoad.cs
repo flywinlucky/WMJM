@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroyOnLoad : MonoBehaviour
+public class YGDontDestroyOnLoad : MonoBehaviour
 {
     public bool enableScriptOnStart;
 
