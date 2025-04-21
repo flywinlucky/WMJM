@@ -7,6 +7,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
 
 namespace WatermelonGameClone
 {
@@ -120,6 +121,31 @@ namespace WatermelonGameClone
         [Header("Tutorial")]
         [SerializeField] private TutorialHandler _tutorial;
 
+        private void OnEnable()
+        {
+            YG2.onRewardAdv += OnReward;
+        }
+
+        private void OnDisable()
+        {
+            YG2.onRewardAdv -= OnReward;
+            CancelInvoke(nameof(SaveGameData));
+        }
+
+        private void OnReward(string id)
+        {
+            if (id == "continue_game_over_popup")
+            {
+                Revive();
+            }
+            else if (id == "unlock_big_item_popup")
+            {
+                UnlockedBigItemPopUpVisibleState(false);
+                CreateCustomSphere(unlockBigItemSphere);
+            }
+        }
+
+
         private void Start()
         {
             int defaultSkin = RemoteConfigManager.Instance.Get<int>("first_skin_id", 0);
@@ -173,10 +199,7 @@ namespace WatermelonGameClone
             InvokeRepeating(nameof(SaveGameData), 5f, 5f);
         }
 
-        private void OnDisable()
-        {
-            CancelInvoke(nameof(SaveGameData));
-        }
+  
 
         public void SaveGameData()
         {
@@ -256,22 +279,32 @@ namespace WatermelonGameClone
             }
         }
 
+        public void ShowReward_ClearSmallItems()
+        {
+            Debug.Log("ClearSmallItems: Showing rewarded ad...");
+
+            YG2.RewardedAdvShow("clear_small_items", () =>
+            {
+                Debug.Log("ClearSmallItems: Ad watched. Clearing small items...");
+                ClearSmallItems();
+            });
+        }
+
+
         public void ClearSmallItems()
         {
-            // Obține toate componente de tip Sphere din subcopiii lui _spherePosition
             Sphere[] spheres = _spherePosition.GetComponentsInChildren<Sphere>();
 
-            // Parcurge fiecare componentă Sphere găsită
             foreach (Sphere sphere in spheres)
             {
                 if (sphere.isSmallItem)
                 {
-                    // Accesează componenta Sphere și utilizează-o cum dorești
                     Debug.Log("Found Small Fruit: " + sphere.gameObject.name);
                     sphere.DestroyItem();
                 }
             }
         }
+
 
         public void ClearAllItems()
         {
@@ -541,16 +574,33 @@ namespace WatermelonGameClone
 
         public void ShowRewarded_ContinueAfterGameOver()
         {
-            /*ADS.AdsManager.Instance.ShowRewarded("continue_game_over_popup",
-            () =>
+            Debug.Log("GameOverPopup: Showing Yandex rewarded ad...");
+
+            // Afișează reclama și dă recompensa dacă a fost vizionată complet
+            YG2.RewardedAdvShow("continue_game_over_popup", () =>
             {
-                Debug.Log("[GameOverPopup] No rewarded ads available");
-            },
-            () =>
-            {
+                Debug.Log("GameOverPopup: Ad watched. Reviving...");
                 Revive();
-            });*/
+            });
         }
+
+
+
+        private void OnRewardVideo(string id)
+        {
+            if (id == "unlock_big_item_popup")
+            {
+                Debug.Log("UBIP: User watched ad, give reward.");
+                UnlockedBigItemPopUpVisibleState(false);
+                CreateCustomSphere(unlockBigItemSphere);
+            }
+            else if (id == "continue_game_over_popup")
+            {
+                Debug.Log("GameOverPopup: User watched ad, reviving player.");
+                Revive();
+            }
+        }
+
 
         public void Revive()
         {
@@ -662,19 +712,16 @@ namespace WatermelonGameClone
 
         public void ShowReward_UnlockedBigItemPopUp()
         {
+            Debug.Log("UBIP: Showing Yandex rewarded ad...");
 
-            /*Debug.Log("UBIP : Show reward And get Prise !");
-
-            ADS.AdsManager.Instance.ShowRewarded("unlock_big_item_popup",
-                () => {
-                    Debug.Log("UBIP : No rewarded ads available");
-                    UnlockedBigItemPopUpVisibleState(false);
-                },
-                () => {
-                    UnlockedBigItemPopUpVisibleState(false);
-                    CreateCustomSphere(unlockBigItemSphere);
-                });*/
+            YG2.RewardedAdvShow("unlock_big_item_popup", () =>
+            {
+                Debug.Log("UBIP: Ad watched. Unlocking item...");
+                UnlockedBigItemPopUpVisibleState(false);
+                CreateCustomSphere(unlockBigItemSphere);
+            });
         }
+
 
         public void FreeCreateCustomSphere()
         {

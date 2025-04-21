@@ -4282,7 +4282,6 @@ GameObject:
   - component: {fileID: 1046890023}
   - component: {fileID: 1046890022}
   - component: {fileID: 1046890021}
-  - component: {fileID: 1046890025}
   m_Layer: 5
   m_Name: Rewarded Ad Button
   m_TagString: Untagged
@@ -4454,9 +4453,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1046890025}
-        m_TargetAssemblyTypeName: RewardedAdButton, Assembly-CSharp
-        m_MethodName: ButtonClicked
+      - m_Target: {fileID: 713621976}
+        m_TargetAssemblyTypeName: WatermelonGameClone.GameManager, Assembly-CSharp
+        m_MethodName: ShowReward_ClearSmallItems
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4504,33 +4503,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046890018}
   m_CullTransparentMesh: 1
---- !u!114 &1046890025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046890018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 409b6c8e1e83e4f4ab89dcfa4476c7e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onCompleted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 713621976}
-        m_TargetAssemblyTypeName: WatermelonGameClone.GameManager, Assembly-CSharp
-        m_MethodName: ClearSmallItems
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1071129861
 GameObject:
   m_ObjectHideFlags: 0
@@ -9134,6 +9106,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 418778776}
     m_Modifications:
+    - target: {fileID: 2935254225530982392, guid: 7a47b5a43749ae24aba164e0a59bd590,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 713621976}
+    - target: {fileID: 2935254225530982392, guid: 7a47b5a43749ae24aba164e0a59bd590,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowReward_ClearSmallItems
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935254225530982392, guid: 7a47b5a43749ae24aba164e0a59bd590,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WatermelonGameClone.GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3019343137901349714, guid: 7a47b5a43749ae24aba164e0a59bd590,
         type: 3}
       propertyPath: m_Name
