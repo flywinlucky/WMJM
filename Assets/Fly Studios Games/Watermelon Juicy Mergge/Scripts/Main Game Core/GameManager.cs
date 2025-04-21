@@ -541,7 +541,7 @@ namespace WatermelonGameClone
 
         public void ShowRewarded_ContinueAfterGameOver()
         {
-            ADS.AdsManager.Instance.ShowRewarded("continue_game_over_popup",
+            /*ADS.AdsManager.Instance.ShowRewarded("continue_game_over_popup",
             () =>
             {
                 Debug.Log("[GameOverPopup] No rewarded ads available");
@@ -549,7 +549,7 @@ namespace WatermelonGameClone
             () =>
             {
                 Revive();
-            });
+            });*/
         }
 
         public void Revive()
@@ -663,7 +663,7 @@ namespace WatermelonGameClone
         public void ShowReward_UnlockedBigItemPopUp()
         {
 
-            Debug.Log("UBIP : Show reward And get Prise !");
+            /*Debug.Log("UBIP : Show reward And get Prise !");
 
             ADS.AdsManager.Instance.ShowRewarded("unlock_big_item_popup",
                 () => {
@@ -673,7 +673,7 @@ namespace WatermelonGameClone
                 () => {
                     UnlockedBigItemPopUpVisibleState(false);
                     CreateCustomSphere(unlockBigItemSphere);
-                });
+                });*/
         }
 
         public void FreeCreateCustomSphere()

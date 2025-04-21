@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,6 +198,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -743,7 +743,7 @@ PrefabInstance:
         type: 3}
       propertyPath: products.Array.data[0].purchasedCallback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1311801143}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dd4ea96b23a92646a37c8ef21c7d4b2, type: 3}
 --- !u!1001 &1311801142
@@ -870,20 +870,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7982977893870272747, guid: 4f1afdbdfcbd31f469f476de4b7ca9a8, type: 3}
+    - {fileID: 7982977892681839484, guid: 4f1afdbdfcbd31f469f476de4b7ca9a8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4f1afdbdfcbd31f469f476de4b7ca9a8, type: 3}
---- !u!114 &1311801143 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7982977893870272747, guid: 4f1afdbdfcbd31f469f476de4b7ca9a8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1311801142}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66e78d07832e2de4eb4d3f551f6c5edb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1363864221
 PrefabInstance:
   m_ObjectHideFlags: 0

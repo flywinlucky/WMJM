@@ -38,9 +38,6 @@ public class SettingsAdButtonController : MonoBehaviour
             WatermelonGameClone.GameManager.Instance.ClearSmallItems();
         };
 
-        if (_showRewarded)
-            ADS.AdsManager.Instance.ShowRewarded(placement, notReadyCallback, completedCallback);
-        else
-            ADS.AdsManager.Instance.ShowInterstitialNoAlert(placement, notReadyCallback, completedCallback);
+ 
     }
 }

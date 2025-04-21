@@ -13,6 +13,6 @@ public class RewardedAdButton : MonoBehaviour
         Action notReadyCallback = () => Debug.Log("[SettingsPopup] No ads available");
         Action completedCallback = () => _onCompleted?.Invoke();
 
-        ADS.AdsManager.Instance.ShowRewarded(placement, notReadyCallback, completedCallback);
+ 
     }
 }
