@@ -959,7 +959,7 @@ PrefabInstance:
     - target: {fileID: 9200518738927543063, guid: 1713ec2d555e85d488508cb17eb469fa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9200518738927543063, guid: 1713ec2d555e85d488508cb17eb469fa,
         type: 3}
@@ -970,7 +970,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1452975030}
+      objectReference: {fileID: 0}
     - target: {fileID: 9200518738927543063, guid: 1713ec2d555e85d488508cb17eb469fa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -993,16 +993,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1260791133359858342, guid: 1713ec2d555e85d488508cb17eb469fa, type: 3}
+    - {fileID: 9066983648607488078, guid: 1713ec2d555e85d488508cb17eb469fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1713ec2d555e85d488508cb17eb469fa, type: 3}
 --- !u!1 &1452975027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9200518738627804798, guid: 1713ec2d555e85d488508cb17eb469fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 1452975026}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1452975028 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9200518738927543051, guid: 1713ec2d555e85d488508cb17eb469fa,
     type: 3}
   m_PrefabInstance: {fileID: 1452975026}
   m_PrefabAsset: {fileID: 0}
@@ -1012,20 +1007,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1452975026}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1452975030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1452975028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a54f705abd725f64fb3abc406effa667, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _product: 1
-  _priceText: {fileID: 0}
 --- !u!1 &1671698723
 GameObject:
   m_ObjectHideFlags: 0

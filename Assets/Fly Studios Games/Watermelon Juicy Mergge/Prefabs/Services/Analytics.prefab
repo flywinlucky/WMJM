@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5739707983530635880}
   - component: {fileID: 5739707983524852292}
-  - component: {fileID: 5739707984149020243}
   m_Layer: 0
   m_Name: Analytics
   m_TagString: Untagged
@@ -52,15 +51,3 @@ MonoBehaviour:
   Logs: 0
   HandleFirstActivationAsUpdate: 0
   StatisticsSending: 1
---- !u!114 &5739707984149020243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5739707983531059624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83d17e44896dd1a4789a3af2b114c47b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

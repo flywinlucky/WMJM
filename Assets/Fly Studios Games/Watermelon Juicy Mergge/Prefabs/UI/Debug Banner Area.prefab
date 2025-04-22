@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5549260578140320697}
   - component: {fileID: 5549260578140320698}
   - component: {fileID: 5549260578140320696}
-  - component: {fileID: 2581436461179499017}
   m_Layer: 5
   m_Name: Remove AdsButton (1)
   m_TagString: Untagged
@@ -120,21 +119,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 5549260578140320698}
   m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &2581436461179499017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5549260578140320676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f5463ce821bbcf499c86d366fd8dfca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnClick:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &5549260578917565882

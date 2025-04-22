@@ -641,8 +641,6 @@ MonoBehaviour:
   Sound_Bool: 0
   Music_Toggle: {fileID: 3019343137241453077}
   Music_Bool: 0
-  Vibration_Toggle: {fileID: 0}
-  Vibration_Bool: 0
 --- !u!4 &359778389
 Transform:
   m_ObjectHideFlags: 0
@@ -2692,7 +2690,6 @@ GameObject:
   - component: {fileID: 1240518801}
   - component: {fileID: 1240518800}
   - component: {fileID: 1240518799}
-  - component: {fileID: 1240518797}
   - component: {fileID: 1240518802}
   m_Layer: 5
   m_Name: Main UI Canvas (1)
@@ -2701,19 +2698,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1240518797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240518796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f04605b94c3d5240b866e635b29b255, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enableScriptOnStart: 0
 --- !u!114 &1240518799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9147,42 +9131,42 @@ PrefabInstance:
     - target: {fileID: 3019343138606486923, guid: 7a47b5a43749ae24aba164e0a59bd590,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3019343138606486923, guid: 7a47b5a43749ae24aba164e0a59bd590,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3019343138606486923, guid: 7a47b5a43749ae24aba164e0a59bd590,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 542.775
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3019343138606486923, guid: 7a47b5a43749ae24aba164e0a59bd590,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3019343138800998610, guid: 7a47b5a43749ae24aba164e0a59bd590,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3019343138800998610, guid: 7a47b5a43749ae24aba164e0a59bd590,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3019343138800998610, guid: 7a47b5a43749ae24aba164e0a59bd590,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 230.925
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3019343138800998610, guid: 7a47b5a43749ae24aba164e0a59bd590,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3019343138857952775, guid: 7a47b5a43749ae24aba164e0a59bd590,
         type: 3}
