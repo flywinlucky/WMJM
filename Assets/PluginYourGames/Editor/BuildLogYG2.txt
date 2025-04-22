@@ -1,3 +1,3 @@
-Build path: C:/Users/flywi/Desktop/g1
-Build number: 1
+Build path: C:/Users/flywi/Desktop/nEWG1
+Build number: 2
 PluginYG version: 2.0031
