@@ -8,7 +8,6 @@ public class MediationManager : MonoBehaviour
     private bool offlinePanelInstantiated;
 
     public bool networkRequest;
-    public bool enablePingStatus;
 
     [Header("Offline Panel")]
     [ShowIf("networkRequest")]
@@ -58,11 +57,6 @@ public class MediationManager : MonoBehaviour
 
             if (networkRequest)
                 StartCoroutine(CheckInternetConnection());
-
-            if (enablePingStatus)
-            {
-                StartCoroutine(StartPingCecker());
-            }
         }
     }
 
@@ -96,24 +90,6 @@ public class MediationManager : MonoBehaviour
     {
         Destroy(instantiedOfflinePopUp);
         offlinePanelInstantiated = false;
-    }
-
-    #endregion
-
-    #region Ping
-
-    private IEnumerator StartPingCecker()
-    {
-        var ping = new Ping("8.8.8.8");
-
-        while (!ping.isDone)
-        {
-            pingStatus = false;
-            yield return null;
-        }
-
-        pingStatus = true;
-        ping_float = ping.time;
     }
 
     #endregion

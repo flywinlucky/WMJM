@@ -29,7 +29,7 @@ public class SettingsAdButtonController : MonoBehaviour
 
     public void AdButtonClick()
     {
-        string placement = "rewarded_settings_clear_small_itmes";
+        //string placement = "rewarded_settings_clear_small_itmes";
 
         Action notReadyCallback = () => Debug.Log("[SettingsPopup] No ads available");
         Action completedCallback = () =>

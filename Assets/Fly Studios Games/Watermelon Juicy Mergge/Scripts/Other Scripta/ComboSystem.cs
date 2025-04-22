@@ -51,7 +51,7 @@ public class ComboSystem : MonoBehaviour
         }
     }
 
-    [System.Obsolete]
+ 
     public void IncreaseComboCount()
     {
         timeRemaining =+ timeIncreser;
@@ -68,7 +68,7 @@ public class ComboSystem : MonoBehaviour
         //textComboPrefab.GetComponent<Animator>().Play("Base Layer.Open", 0, 0.25f);
     }
 
-    [System.Obsolete]
+ 
     public void SpawnNewCombotextPrefab(string txtMessage)
     {
         Instantiate(textComboPrefab, textSpawnPoint.transform.position, Quaternion.identity, textSpawnPoint);

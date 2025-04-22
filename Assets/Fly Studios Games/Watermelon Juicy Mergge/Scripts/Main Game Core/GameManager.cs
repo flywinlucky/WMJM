@@ -115,8 +115,6 @@ namespace WatermelonGameClone
 
         public int nextSphereNo;
 
-        private int _highestSphereNumber = 0;
-
         [Space]
         [Header("Tutorial")]
         [SerializeField] private TutorialHandler _tutorial;
@@ -469,6 +467,7 @@ namespace WatermelonGameClone
             _currentSphere.transform.parent = _spherePosition;
         }
 
+ 
         public void MergeNext(Vector3 target, int SphereNo)
         {
             if (selectedIndex >= 0 && selectedIndex < spheresCategory.Count && SphereNo < spheresCategory[selectedIndex].spheresCategory.Count - 1)
@@ -904,7 +903,7 @@ namespace WatermelonGameClone
         private Dictionary<SoundEffect, AudioClip> soundEffects = new Dictionary<SoundEffect, AudioClip>();
 
         private static readonly int s_scoreCoefficient = 10;
-        private float _soundVolume = 1.0f;
+ 
 
         public ReactiveProperty<GameState> CurrentState
         {

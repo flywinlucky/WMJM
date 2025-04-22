@@ -1,27 +1,24 @@
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ComboText : MonoBehaviour
 {
     public Text comboText;
-    public new ParticleSystem particleSystem;
+    public ParticleSystem comboParticles; // redenumit pentru a evita conflictul
 
-    private void OnEnable()
-    {
-        //comboText = GetComponent<Text>();
-        //particleSystem = GetComponent<ParticleSystem>();
-    }
-
-    [System.Obsolete]
-    public void ComboTextUI(string textMessage, Color textColor) // , Color textColor
+    public void ComboTextUI(string textMessage, Color textColor)
     {
         if (comboText)
         {
-            comboText.text = textMessage.ToString();
+            comboText.text = textMessage;
             comboText.color = textColor;
-            particleSystem.startColor = textColor;
-            particleSystem.Play();
+
+            if (comboParticles)
+            {
+                var main = comboParticles.main;
+                main.startColor = textColor;
+                comboParticles.Play();
+            }
         }
     }
 }

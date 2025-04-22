@@ -8,7 +8,7 @@ public class RewardedAdButton : MonoBehaviour
 
     public void ButtonClicked()
     {
-        string placement = "rewarded_settings_clear_small_itmes";
+        //string placement = "rewarded_settings_clear_small_itmes";
 
         Action notReadyCallback = () => Debug.Log("[SettingsPopup] No ads available");
         Action completedCallback = () => _onCompleted?.Invoke();

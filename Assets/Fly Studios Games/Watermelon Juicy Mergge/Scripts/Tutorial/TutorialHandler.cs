@@ -89,12 +89,12 @@ public class TutorialHandler : MonoBehaviour
 
     private void ShowTutorialPopupIfNeeded()
     {
-        return;
-
         if (!PlayerPrefs.HasKey(PREFS_KEY))
         {
             _tutorialWindow.gameObject.SetActive(true);
         }
+
+        return;
     }
 
     public void CloseTutorialPopup()

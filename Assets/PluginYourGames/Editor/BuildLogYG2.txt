@@ -1,0 +1,3 @@
+Build path: C:/Users/flywi/Desktop/g1
+Build number: 1
+PluginYG version: 2.0031
