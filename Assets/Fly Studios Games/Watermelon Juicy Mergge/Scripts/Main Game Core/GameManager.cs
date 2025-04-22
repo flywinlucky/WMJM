@@ -949,11 +949,11 @@ namespace WatermelonGameClone
 
                 _gameView.UpdateBestScore(BestScore.Value);
 
-                Debug.LogWarning("Save New best score value");
+                //Debug.LogWarning("Save New best score value");
             }
             else
             {
-                Debug.LogWarning("No record !");
+                //Debug.LogWarning("No record !");
             }
         }
 

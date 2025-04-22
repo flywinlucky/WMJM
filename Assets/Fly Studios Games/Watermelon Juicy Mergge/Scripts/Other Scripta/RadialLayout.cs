@@ -43,9 +43,15 @@ public class RadialLayout : LayoutGroup
     protected override void OnValidate()
     {
         base.OnValidate();
-        CalculateRadial();
+
+        // Previne apelarea CalculateRadial în editor, doar în playmode se permite
+        if (Application.isPlaying)
+        {
+            CalculateRadial();
+        }
     }
 #endif
+
     void CalculateRadial()
     {
         m_Tracker.Clear();

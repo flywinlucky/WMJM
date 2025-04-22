@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4943396, g: 0.52434945, b: 1, a: 1}
+  m_Color: {r: 0.90625, g: 0.39999998, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1X COMBO
+  m_Text: 3X COMBO
 --- !u!114 &6238216097379505637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,12 +213,12 @@ PrefabInstance:
     - target: {fileID: 56109258250405712, guid: 733ce4377d5a1a249a78f867bd8df087,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.52434945
+      value: 0.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 56109258250405712, guid: 733ce4377d5a1a249a78f867bd8df087,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.4943396
+      value: 0.90625
       objectReference: {fileID: 0}
     - target: {fileID: 177863333265070932, guid: 733ce4377d5a1a249a78f867bd8df087,
         type: 3}
