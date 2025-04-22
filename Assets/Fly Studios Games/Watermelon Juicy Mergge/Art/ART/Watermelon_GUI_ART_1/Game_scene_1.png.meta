@@ -129,12 +129,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -361,15 +361,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Game_scene_1_7: 1917471942
-      Game_scene_1_2: 1087381519
-      Game_scene_1_5: 2114674189
       Game_scene_1_0: 1639827591
-      Game_scene_1_6: 379599968
-      Game_scene_1_3: 757492233
       Game_scene_1_1: 1373864324
-      Game_scene_1_8: -251446579
+      Game_scene_1_2: 1087381519
+      Game_scene_1_3: 757492233
       Game_scene_1_4: 1972997520
+      Game_scene_1_5: 2114674189
+      Game_scene_1_6: 379599968
+      Game_scene_1_7: 1917471942
+      Game_scene_1_8: -251446579
       Game_scene_1_9: 594690186
   spritePackingTag: 
   pSDRemoveMatte: 0

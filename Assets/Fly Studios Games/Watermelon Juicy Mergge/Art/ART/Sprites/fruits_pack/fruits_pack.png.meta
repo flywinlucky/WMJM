@@ -129,12 +129,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -382,17 +382,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      fruits_pack_0: -1524234790
+      fruits_pack_1: -944160621
+      fruits_pack_10: 871971007
+      fruits_pack_2: 2072649775
+      fruits_pack_3: -423072741
       fruits_pack_4: 1337983844
       fruits_pack_5: -1836359349
-      fruits_pack_8: -1195915998
-      fruits_pack_2: 2072649775
-      fruits_pack_7: 810174264
-      fruits_pack_10: 871971007
-      fruits_pack_1: -944160621
-      fruits_pack_9: 1208271973
       fruits_pack_6: -1654217785
-      fruits_pack_3: -423072741
-      fruits_pack_0: -1524234790
+      fruits_pack_7: 810174264
+      fruits_pack_8: -1195915998
+      fruits_pack_9: 1208271973
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

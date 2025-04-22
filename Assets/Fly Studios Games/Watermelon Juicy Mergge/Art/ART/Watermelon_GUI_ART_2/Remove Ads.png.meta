@@ -129,12 +129,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -257,10 +257,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Remove Ads_0: 165571026
-      Remove Ads_2: 1626009526
-      Remove Ads_4: -1003221469
       Remove Ads_1: -1744959515
+      Remove Ads_2: 1626009526
       Remove Ads_3: 1413386283
+      Remove Ads_4: -1003221469
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

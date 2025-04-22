@@ -129,12 +129,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -277,12 +277,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Main Game Scene GUI_1: -2146970481
       Main Game Scene GUI_0: -1815155592
-      Main Game Scene GUI_4: -1459523652
-      Main Game Scene GUI_3: 1243266003
-      Main Game Scene GUI_5: 864629441
+      Main Game Scene GUI_1: -2146970481
       Main Game Scene GUI_2: -1039175691
+      Main Game Scene GUI_3: 1243266003
+      Main Game Scene GUI_4: -1459523652
+      Main Game Scene GUI_5: 864629441
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

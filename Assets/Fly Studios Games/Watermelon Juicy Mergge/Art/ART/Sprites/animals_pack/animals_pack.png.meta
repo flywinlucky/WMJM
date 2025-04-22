@@ -127,14 +127,14 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -382,17 +382,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animals_pack_6: 1031503114
-      animals_pack_10: 1465393885
-      animals_pack_9: -2035483472
-      animals_pack_5: -1365589706
       animals_pack_0: -1913048858
       animals_pack_1: -986708310
+      animals_pack_10: 1465393885
+      animals_pack_2: 363689025
+      animals_pack_3: 970777460
+      animals_pack_4: -1922262856
+      animals_pack_5: -1365589706
+      animals_pack_6: 1031503114
       animals_pack_7: -1310111148
       animals_pack_8: 1410975142
-      animals_pack_2: 363689025
-      animals_pack_4: -1922262856
-      animals_pack_3: 970777460
+      animals_pack_9: -2035483472
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

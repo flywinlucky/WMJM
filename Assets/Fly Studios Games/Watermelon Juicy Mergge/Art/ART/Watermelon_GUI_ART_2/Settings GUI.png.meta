@@ -129,12 +129,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -382,15 +382,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Settings GUI_1: -4623396
-      Settings GUI_7: -1727967900
       Settings GUI_0: -1710211061
-      Settings GUI_6: 719824058
+      Settings GUI_1: -4623396
       Settings GUI_10: 477843786
-      Settings GUI_4: 787370343
       Settings GUI_2: 1254751341
       Settings GUI_3: -769483645
+      Settings GUI_4: 787370343
       Settings GUI_5: 186333862
+      Settings GUI_6: 719824058
+      Settings GUI_7: -1727967900
       Settings GUI_8: -643075523
       Settings GUI_9: -1918919667
   spritePackingTag: 
