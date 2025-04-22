@@ -19,18 +19,15 @@ public partial class WindowSelectSkin : UIMonoBehaviour
         _contentPanel.SetActive(false);
         _unlockText.gameObject.SetActive(false);
 
-        RemoteConfigManager.Instance.OnInitialized(() =>
-        {
-            Initialize();
-            UpdateContent();
+        Initialize();
+        UpdateContent();
 
-            _contentPanel.SetActive(true);
-        });
+        _contentPanel.SetActive(true);
     }
 
     private void Initialize()
     {
-        _firstSkin = RemoteConfigManager.Instance.Get<int>("first_skin_id", 0);
+        _firstSkin = 0;
         _currentSelectedSkinsIndex = PlayerPrefs.GetInt(SELECTED_SKIN_KEY, _firstSkin);
     }
 
@@ -40,7 +37,7 @@ public partial class WindowSelectSkin : UIMonoBehaviour
         _skinItems.ForEach(skin =>
         {
             skin.SetState(SkinItem.State.UNLOCKED);
-            skin.OnClicked += (skin) => SetSkinIndex(skin.Id); 
+            skin.OnClicked += (skin) => SetSkinIndex(skin.Id);
         });
 
         // change skins order

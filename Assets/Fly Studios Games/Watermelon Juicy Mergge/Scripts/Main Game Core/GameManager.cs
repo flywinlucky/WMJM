@@ -148,7 +148,7 @@ namespace WatermelonGameClone
 
         private void Start()
         {
-            int defaultSkin = RemoteConfigManager.Instance.Get<int>("first_skin_id", 0);
+            int defaultSkin = 0;
             selectedIndex = PlayerPrefs.GetInt(WindowSelectSkin.SELECTED_SKIN_KEY, defaultSkin);
 
 
@@ -212,7 +212,7 @@ namespace WatermelonGameClone
         private int _currentMergeGoal = 100;
         private void InitializeTopPanel()
         {
-            bool showMergeGoal = RemoteConfigManager.Instance.Get<bool>("show_merge_goal", true);
+            bool showMergeGoal = true;
             _gameView.InitializeTopPanel(showMergeGoal);
 
             if (!showMergeGoal)
@@ -526,7 +526,6 @@ namespace WatermelonGameClone
                 mergeFXInstance.transform.localScale = sphereScale -= new Vector3(0.2f, 0.2f, 0.2f);
                 
                 HandleMergeGoalPanel(nextSphereNo);
-                HandleMergeAnalyticsEvents(nextSphereNo);
             }
         }
 
@@ -534,21 +533,6 @@ namespace WatermelonGameClone
         {
             int unlockedSkin = selectedIndex == 0 ? 1 : 0;
             skinUnlocked.Show(spheresCategory[unlockedSkin].spheresCategory);
-        }
-
-        private void HandleMergeAnalyticsEvents(int nextSphereNo)
-        {
-            if (nextSphereNo > GameStatistics.HighestSphereNumber)
-            {
-                GameStatistics.HighestSphereNumber = nextSphereNo;
-                Analytics.AnalyticsEvents.LogFirstMergeFruitEver(nextSphereNo);
-            }
-
-            if (nextSphereNo > _highestSphereNumber)
-            {
-                _highestSphereNumber = nextSphereNo;
-                Analytics.AnalyticsEvents.LogFirstMergeFruitGame(nextSphereNo);
-            }
         }
 
         public bool CheckIfBigItemIsCreated(string itemName)
@@ -566,9 +550,6 @@ namespace WatermelonGameClone
                 SaveBestScore();
                 gameOverPanel.SetActive(true);
                 onlyOnceGameOver = true;
-
-                Analytics.AnalyticsEvents.LogGameOver(
-                    Mathf.FloorToInt(Time.time - GameStatistics.LastGameStartTime));
             }
         }
 

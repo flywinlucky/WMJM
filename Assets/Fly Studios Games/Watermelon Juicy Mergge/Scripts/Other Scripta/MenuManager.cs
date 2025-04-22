@@ -20,8 +20,5 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Start New Game");
         PlayerPrefs.SetInt("newGamevalue", 1);
-
-        GameStatistics.GameStart();
-        Analytics.AnalyticsEvents.LogGameStart();
     }
 }
