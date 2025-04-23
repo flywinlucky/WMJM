@@ -1,3 +1,3 @@
-Build path: C:/Users/flywi/Desktop/Fly Studios Games/Yandex Games WMJM Build
-Build number: 3
+Build path: C:/Users/flywi/Desktop/Fly Studios Games/v3
+Build number: 4
 PluginYG version: 2.0031
