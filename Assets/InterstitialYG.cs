@@ -9,6 +9,15 @@ public class InterstitialYG : MonoBehaviour
     public bool enableInterstitials = true; // Starea countdown-ului
     private bool isShowingAd = false; // Flag pentru a preveni apeluri multiple
 
+    private void Start()
+    {
+      
+        string lang = YG2.envir.language;
+        Debug.Log("Detected language: " + lang);
+    }
+
+    
+
     void Update()
     {
         // Actualizează countdown-ul automat dacă este activ
