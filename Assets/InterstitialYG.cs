@@ -11,12 +11,10 @@ public class InterstitialYG : MonoBehaviour
 
     private void Start()
     {
-      
+        YG2.SwitchLanguage("en");
         string lang = YG2.envir.language;
         Debug.Log("Detected language: " + lang);
     }
-
-    
 
     void Update()
     {
