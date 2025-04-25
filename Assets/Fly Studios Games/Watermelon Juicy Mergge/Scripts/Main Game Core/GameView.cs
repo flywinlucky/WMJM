@@ -22,7 +22,7 @@ namespace WatermelonGameClone
         {
             //_scorePanel.SetActive(!showMergeGoal);
             //_mergeGoalPanel.SetActive(showMergeGoal);
-            _scorePanel.SetActive(true);
+            _scorePanel.SetActive(false);
             _mergeGoalPanel.SetActive(true);
         }
 
