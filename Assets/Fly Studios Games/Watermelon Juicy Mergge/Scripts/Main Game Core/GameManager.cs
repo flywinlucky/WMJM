@@ -1,6 +1,5 @@
 ﻿using Sirenix.OdinInspector;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UniRx;
@@ -20,10 +19,10 @@ namespace WatermelonGameClone
 
         public GameObject unlockBigItemPopUpGameobject;
         public UnlockBigItemPopUp unlockBigItemPopUp;
-        
+
         [ReadOnly]
         public Sphere unlockBigItemSphere;
-     
+
         //[ReadOnly]
         public List<string> bigItemsUnlocked = new List<string>();
         [Space]
@@ -197,7 +196,7 @@ namespace WatermelonGameClone
             InvokeRepeating(nameof(SaveGameData), 5f, 5f);
         }
 
-  
+
 
         public void SaveGameData()
         {
@@ -258,7 +257,7 @@ namespace WatermelonGameClone
             PlayerPrefs.DeleteKey("newGamevalue");
 
             Debug.LogWarning("NEW GAME !");
-            
+
             ClearAllItems();
             ClearDataItemsList();
 
@@ -467,7 +466,7 @@ namespace WatermelonGameClone
             _currentSphere.transform.parent = _spherePosition;
         }
 
- 
+
         public void MergeNext(Vector3 target, int SphereNo)
         {
             if (selectedIndex >= 0 && selectedIndex < spheresCategory.Count && SphereNo < spheresCategory[selectedIndex].spheresCategory.Count - 1)
@@ -523,7 +522,7 @@ namespace WatermelonGameClone
                 mergeFXInstance.transform.position += new Vector3(0, 0, -1.9f); // Adăugăm +1 la coordonata Z
 
                 mergeFXInstance.transform.localScale = sphereScale -= new Vector3(0.2f, 0.2f, 0.2f);
-                
+
                 HandleMergeGoalPanel(nextSphereNo);
             }
         }
@@ -903,7 +902,7 @@ namespace WatermelonGameClone
         private Dictionary<SoundEffect, AudioClip> soundEffects = new Dictionary<SoundEffect, AudioClip>();
 
         private static readonly int s_scoreCoefficient = 10;
- 
+
 
         public ReactiveProperty<GameState> CurrentState
         {

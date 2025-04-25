@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using YG;
-using TMPro;
-using System.Collections;
 
 public class InterstitialYG : MonoBehaviour
 {
+    private bool isGameReady;
     public float countdownTimer; // Durata countdown-ului în secunde
     public bool enableInterstitials = true; // Starea countdown-ului
     private bool isShowingAd = false; // Flag pentru a preveni apeluri multiple
@@ -14,6 +14,8 @@ public class InterstitialYG : MonoBehaviour
         YG2.SwitchLanguage("en");
         string lang = YG2.envir.language;
         Debug.Log("Detected language: " + lang);
+
+        StartCoroutine(WaitAndSignalReady());
     }
 
     void Update()
@@ -45,5 +47,15 @@ public class InterstitialYG : MonoBehaviour
         // Resetează timer-ul și starea
         countdownTimer = 65f;
         isShowingAd = false;
+    }
+
+    private IEnumerator WaitAndSignalReady()
+    {
+        // Simulează un delay de pregătire sau așteaptă o scenă, UI etc.
+        yield return new WaitForSeconds(2f); // sau WaitUntil(...)
+
+        YG2.GameReadyAPI();
+        Debug.Log("✅ GameReady() called — game is now ready for interaction.");
+        isGameReady = true;
     }
 }
