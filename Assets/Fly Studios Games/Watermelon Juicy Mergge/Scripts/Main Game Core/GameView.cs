@@ -20,8 +20,10 @@ namespace WatermelonGameClone
 
         public void InitializeTopPanel(bool showMergeGoal)
         {
-            _scorePanel.SetActive(!showMergeGoal);
-            _mergeGoalPanel.SetActive(showMergeGoal);
+            //_scorePanel.SetActive(!showMergeGoal);
+            //_mergeGoalPanel.SetActive(showMergeGoal);
+            _scorePanel.SetActive(true);
+            _mergeGoalPanel.SetActive(true);
         }
 
         public void HideGoalPanel()

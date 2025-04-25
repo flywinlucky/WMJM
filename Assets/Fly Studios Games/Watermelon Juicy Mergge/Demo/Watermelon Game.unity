@@ -1223,10 +1223,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1676642032}
+  - {fileID: 3566276582034038218}
   - {fileID: 3033163973351922793}
   - {fileID: 6653308200555117353}
   - {fileID: 4288661009546296424}
-  - {fileID: 3566276582034038218}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4810,7 +4810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1334355094
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8449,7 +8449,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 418778776}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -8648,7 +8648,7 @@ PrefabInstance:
     - target: {fileID: 5068718556895455572, guid: e58c02c55d4c2a14aa121bda7a54a2c7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5068718556895455572, guid: e58c02c55d4c2a14aa121bda7a54a2c7,
         type: 3}
