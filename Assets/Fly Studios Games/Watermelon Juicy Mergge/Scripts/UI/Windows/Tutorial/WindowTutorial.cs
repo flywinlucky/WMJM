@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -24,11 +24,12 @@ public class WindowTutorial : UIMonoBehaviour
     {
         _spheres = new();
 
-        foreach (Transform child in _layout)
+        for (int i = 1; i < _layout.childCount; i++) // Începem de la 1, ignorăm primul copil
         {
-            _spheres.Add(child.GetComponent<SetSpriteUi>());
+            _spheres.Add(_layout.GetChild(i).GetComponent<SetSpriteUi>());
         }
     }
+
 
     public void Initialize(int skinId, List<GameManager.SpheresCategory> sphereSkins)
     {
@@ -38,10 +39,11 @@ public class WindowTutorial : UIMonoBehaviour
         {
             List<Sphere> categorySpheres = sphereSkins[skinId].spheresCategory.Select(s => s.sphere).ToList();
 
-            for (int i = 0; i < categorySpheres.Count; i++)
+            for (int i = 0; i < Mathf.Min(categorySpheres.Count, _spheres.Count); i++)
             {
                 _spheres[i].SetImage(categorySpheres[i].itemSpriteRenderer.sprite);
             }
+
         }
     }
 
