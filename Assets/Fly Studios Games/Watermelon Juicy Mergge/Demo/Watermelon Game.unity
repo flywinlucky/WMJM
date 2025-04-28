@@ -5159,6 +5159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sideColor: {r: 1, g: 0.92156863, b: 0.6156863, a: 1}
+  shadowColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 0.11764706}
+  shadowWidth: 25
+  shadowOpacity: 0.2
+  shadowGradientLength: 16
 --- !u!4 &1104702111
 Transform:
   m_ObjectHideFlags: 0
