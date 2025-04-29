@@ -610,14 +610,14 @@ namespace WatermelonGameClone
             }
 
             // Afișează în consolă numărul de elemente adăugate
-            Debug.Log("Loaded " + foundSpheres.Length + " spheres from the scene.");
+            //Debug.Log("Loaded " + foundSpheres.Length + " spheres from the scene.");
         }
 
         bool onlyOanceRestore;
 
         public void RestoreSphereData()
         {
-            Debug.Log("RestoreSphereData");
+            //Debug.Log("RestoreSphereData");
 
             if (!onlyOanceRestore)
             {

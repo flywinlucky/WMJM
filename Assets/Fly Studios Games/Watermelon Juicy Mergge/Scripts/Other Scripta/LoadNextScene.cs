@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadNextScene : MonoBehaviour
 {
-    [SerializeField] private float _sceneChangeDelay = 2f;
+    [SerializeField] private float _sceneChangeDelay;
     private static bool _hasSceneSwitched = false;
 
     private void Awake()
