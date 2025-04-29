@@ -4,8 +4,7 @@ using YG;
 
 public class InterstitialYG : MonoBehaviour
 {
-    private bool isGameReady;
-    public float countdownTimer; // Durata countdown-ului în secunde
+    private float countdownTimer = 70; // Durata countdown-ului în secunde
     public bool enableInterstitials = true; // Starea countdown-ului
     private bool isShowingAd = false; // Flag pentru a preveni apeluri multiple
 
@@ -13,7 +12,6 @@ public class InterstitialYG : MonoBehaviour
     {
         YG2.SwitchLanguage("en");
         string lang = YG2.envir.language;
-        Debug.Log("Detected language: " + lang);
 
         StartCoroutine(WaitAndSignalReady());
     }
@@ -38,24 +36,23 @@ public class InterstitialYG : MonoBehaviour
         if (isShowingAd) yield break;
         isShowingAd = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         // Afișează reclama interstitială
         Debug.Log("Showing interstitial ad");
         YG2.InterstitialAdvShow();
 
         // Resetează timer-ul și starea
-        countdownTimer = 65f;
+        countdownTimer = 70f;
         isShowingAd = false;
     }
 
     private IEnumerator WaitAndSignalReady()
     {
         // Simulează un delay de pregătire sau așteaptă o scenă, UI etc.
-        yield return new WaitForSeconds(2f); // sau WaitUntil(...)
+        yield return new WaitForSeconds(0.5f); // sau WaitUntil(...)
 
         YG2.GameReadyAPI();
         Debug.Log("✅ GameReady() called — game is now ready for interaction.");
-        isGameReady = true;
     }
 }

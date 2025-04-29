@@ -1,20 +1,35 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadNextScene : MonoBehaviour
 {
-    [SerializeField] private float _sceneChangeDelay = 1f;
+    [SerializeField] private float _sceneChangeDelay = 2f;
+    private static bool _hasSceneSwitched = false;
+
+    private void Awake()
+    {
+        // Asigură-te că obiectul nu este distrus între scene
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Start()
     {
-        StartCoroutine(LoadSceneAfterDelay(_sceneChangeDelay));
+        if (!_hasSceneSwitched)
+        {
+            _hasSceneSwitched = true;
+            StartCoroutine(LoadSceneAfterDelay(_sceneChangeDelay));
+        }
+        else
+        {
+            // Dacă deja s-a schimbat scena, poți distruge obiectul
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator LoadSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 }
