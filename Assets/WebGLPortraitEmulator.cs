@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using YG;
 
 public class WebGLPortraitEmulator : MonoBehaviour
 {
@@ -18,11 +19,23 @@ public class WebGLPortraitEmulator : MonoBehaviour
     private int portraitWidth = 720;
     private int portraitHeight = 1280;
 
+    private bool isMobile;
+
     private void Start()
     {
-        SetupResolution();
-        CreateSideTexture();
-        CreateShadowTextures();
+        if(YG2.envir.isMobile)
+        {
+            isMobile = true;
+        }
+        else
+        {
+
+            SetupResolution();
+            CreateSideTexture();
+            CreateShadowTextures();
+            
+            isMobile = false;
+        }
     }
 
     private void SetupResolution()
@@ -96,7 +109,7 @@ public class WebGLPortraitEmulator : MonoBehaviour
 
     private void Update()
     {
-        if (Screen.width != lastScreenWidth || Screen.height != lastScreenHeight)
+        if (Screen.width != lastScreenWidth || Screen.height != lastScreenHeight || isMobile == false)
         {
             SetupResolution();
             lastScreenWidth = Screen.width;
